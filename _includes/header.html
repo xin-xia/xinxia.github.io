@@ -1,11 +1,8 @@
-<header>
-    <a href="{{ site.url }}"><h1><span>{{ site.title }}</span></h1></a>
-
-    <nav>
-        <a href="{{ site.url }}/#about">About</a>
-        <a href="{{ site.url }}#research">Research</a>
-        <a href="{{ site.url }}#teaching">Teaching</a>
-        <a href="{{ site.url }}#contact">Contact</a>
-    </nav>
-
+{% if page.header != 'none' %}
+<header class="site-header fixed-banner">
+    <h3 class="site-title">
+      <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+      <small>{{ site.tagline }}</small>
+    </h3>
 </header>
+{% endif %}

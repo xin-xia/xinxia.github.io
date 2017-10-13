@@ -1,47 +1,39 @@
-# Site settings
-title: Henry Jekyll
+# Setup
+title:               Utterson
+tagline:             The Jekyll Companion
+url:                 http://utterson.alidcastano.com
+analytics_id:        UA-53335201-2
+
+# About/contact
+author:
+  name:                Alid Castano
+  email:               "" # email here 
+  avatar:              img/avatar.jpg 
+  profile-pic:         img/profile-pic.jpg
+
+
 
 # Build settings
-markdown: kramdown
-permalink: pretty
-
-favicon: "/assets/img/temp_chem.jpg"
-
-port: 3000
-url: http://localhost:3000
-
+markdown:            kramdown
+permalink:           /:title
 sass:
-  sass_dir: assets/css
-  style: :nested
+  sass_dir:          _sass
+  style:            :compressed
 
-# Add bibliography
-gems: ['jekyll/scholar']
 
-scholar:
-  style: assets/bib/_ieee-with-url.csl
-  locale: en
-
-  sort_by: none
-  order: ascending
-
-  group_by: none
-  group_order: ascending
-
-  source: assets/bib
-  bibliography: _mybib.bib
-  bibliography_template: "{{reference}}"
-
-  replace_strings: true
-  join_strings:    true
-
-  use_raw_bibtex_entry: false
-  bibtex_filters:
-  - superscript
-  - latex
-  - HTML
-
-  details_dir:    bibliography
-  details_layout: bibtex.html
-  details_link:   Details
-
-  query: "@*"
+# Default settings
+defaults:
+  -
+    scope:
+      path: "" 
+      type: "posts" 
+    values:
+      layout: "post"
+      author: Gabriel Utterson
+  -
+    scope:
+      path: "" 
+      type: "pages" 
+    values:
+      layout: "page"
+      
